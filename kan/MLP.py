@@ -274,6 +274,7 @@ class MLP(nn.Module):
                 loss.backward()
                 optimizer.step()
 
+
             test_loss = loss_fn_eval(self.forward(dataset['test_input'][test_id].to(self.device)), dataset['test_label'][test_id].to(self.device))
             
             
